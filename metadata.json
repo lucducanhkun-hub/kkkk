@@ -1,0 +1,6 @@
+{
+  "name": "Trang Web Chúc Mừng 20/10 - Happy Vietnamese Women's Day",
+  "description": "Trang web chúc mừng ngày Phụ nữ Việt Nam 20/10 rực rỡ với hiệu ứng hoa rơi, quẻ lời chúc may mắn, tạo thiệp tặng và giao diện Google Doodle tương tác.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}

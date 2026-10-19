@@ -1,0 +1,118 @@
+@import "tailwindcss";
+
+@layer utilities {
+  .font-serif-display {
+    font-family: 'Playfair Display', Georgia, serif;
+  }
+  .font-handwriting {
+    font-family: 'Dancing Script', cursive;
+  }
+  .font-body {
+    font-family: 'Be Vietnam Pro', system-ui, -apple-system, sans-serif;
+  }
+}
+
+:root {
+  --pink: #ff6f9f;
+  --rose: #ffb5c9;
+  --cream: #fff8f4;
+  --plum: #6b3151;
+}
+
+body {
+  margin: 0;
+  min-height: 100vh;
+  overflow-x: hidden;
+  color: var(--plum);
+  font-family: 'Be Vietnam Pro', system-ui, -apple-system, sans-serif;
+  background: radial-gradient(circle at 12% 12%, rgba(255, 255, 255, 0.95) 0 2px, transparent 3px),
+              linear-gradient(145deg, #fff9f7 0%, #ffeaf0 45%, #ffdce6 100%);
+  background-size: 36px 36px, auto;
+}
+
+/* Floating flower petals and hearts */
+@keyframes rise {
+  0% {
+    transform: translateY(0) rotate(0deg) scale(0.8);
+    opacity: 0;
+  }
+  15% {
+    opacity: 0.8;
+  }
+  90% {
+    opacity: 0.8;
+  }
+  100% {
+    transform: translateY(-115vh) rotate(360deg) scale(1.1);
+    opacity: 0;
+  }
+}
+
+.animate-rise {
+  animation: rise linear infinite;
+}
+
+/* Heart burst animation */
+@keyframes heartpop {
+  0% {
+    transform: translateY(0) scale(0.3);
+    opacity: 0;
+  }
+  20% {
+    opacity: 1;
+    transform: translateY(-20px) scale(1.1);
+  }
+  100% {
+    transform: translateY(-180px) rotate(35deg) scale(1.5);
+    opacity: 0;
+  }
+}
+
+.animate-heartpop {
+  animation: heartpop 1.3s cubic-bezier(0.2, 0.8, 0.2, 1) forwards;
+}
+
+/* Gentle pulse glow */
+@keyframes soft-pulse {
+  0%, 100% {
+    transform: scale(1);
+    box-shadow: 0 0 20px rgba(255, 111, 159, 0.25);
+  }
+  50% {
+    transform: scale(1.02);
+    box-shadow: 0 0 32px rgba(255, 111, 159, 0.45);
+  }
+}
+
+.animate-soft-pulse {
+  animation: soft-pulse 3s ease-in-out infinite;
+}
+
+/* Floating badge */
+@keyframes float-gentle {
+  0%, 100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-6px);
+  }
+}
+
+.animate-float-gentle {
+  animation: float-gentle 4s ease-in-out infinite;
+}
+
+/* Custom scrollbar */
+::-webkit-scrollbar {
+  width: 8px;
+}
+::-webkit-scrollbar-track {
+  background: #ffe8ef;
+}
+::-webkit-scrollbar-thumb {
+  background: #fca5c3;
+  border-radius: 999px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: #f472b6;
+}
